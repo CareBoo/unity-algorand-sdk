@@ -1,0 +1,313 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>
+
+  
+
+
+Algorand SDK for Unity
+
+ | Algorand SDK for Unity </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="
+
+  
+
+
+Algorand SDK for Unity
+
+ | Algorand SDK for Unity ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="resources/favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="toc.html">
+    <meta property="docfx:tocrel" content="manual/toc.html">
+    
+    <meta property="docfx:rel" content="">
+    <meta property="docfx:newtab" content="true">
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="resources/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="unity-algorand-sdk" align="center">
+<picture>
+  <img alt="The Algorand Logo" src="docs/images/algorand_logo_mark.svg">
+</picture>
+<br>
+Algorand SDK for Unity
+
+</h1>
+
+<p align="center">
+  <a href="license/LICENSE.html">
+    <img src="https://img.shields.io/github/license/CareBoo/unity-algorand-sdk">
+  </a>
+  <a href="https://github.com/CareBoo/unity-algorand-sdk/actions/workflows/test.yaml">
+    <img src="https://img.shields.io/github/actions/workflow/status/CareBoo/unity-algorand-sdk/test.yaml?branch=main&label=tests">
+  </a>
+  <a href="https://www.npmjs.com/package/com.careboo.unity-algorand-sdk">
+    <img src="https://img.shields.io/npm/v/com.careboo.unity-algorand-sdk">
+  </a>
+  <a href="https://openupm.com/packages/com.careboo.unity-algorand-sdk/">
+    <img src="https://img.shields.io/npm/v/com.careboo.unity-algorand-sdk?label=openupm&registry_uri=https://package.openupm.com">
+  </a>
+</p>
+
+
+
+<p>Integrate your game with <a href="https://www.algorand.com/">Algorand</a>, a Pure Proof-of-Stake blockchain overseen by the Algorand Foundation.
+Create Algorand transactions, Algorand accounts, and use Algorand&#39;s <a href="https://developer.algorand.org/docs/rest-apis/restendpoints/">REST APIs</a>.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#table-of-contents">Table of Contents</a></li>
+<li><a href="#requirements">Requirements</a></li>
+<li><a href="#common-usages">Common Usages</a><ul>
+<li><a href="#make-a-payment-transaction">Make a payment transaction</a><ul>
+<li><a href="#sign-the-transaction-with-an-account">Sign the transaction with an account</a></li>
+<li><a href="#sign-the-transaction-with-kmd">Sign the transaction with <code>kmd</code></a></li>
+<li><a href="#send-the-signed-transaction">Send the signed transaction</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#installation">Installation</a><ul>
+<li><a href="#unity-asset-store">Unity Asset Store</a></li>
+<li><a href="#asset-package">Asset Package</a></li>
+<li><a href="#open-upm">Open UPM</a></li>
+<li><a href="#manually-adding-upm-scopes">Manually Adding UPM Scopes</a></li>
+</ul>
+</li>
+<li><a href="#getting-started">Getting Started</a><ul>
+<li><a href="#documentation-site">Documentation Site</a></li>
+<li><a href="#samples">Samples</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="requirements">Requirements</h2>
+<p>This package supports the following build targets and Unity versions:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Unity Version</th>
+<th style="text-align:center">Windows</th>
+<th style="text-align:center">Mac OS</th>
+<th style="text-align:center">Linux</th>
+<th style="text-align:center">Android</th>
+<th style="text-align:center">iOS</th>
+<th style="text-align:center">WebGL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">2021.3</td>
+<td style="text-align:center"><span class="emoji" shortcode="white_check_mark">✅</span></td>
+<td style="text-align:center"><span class="emoji" shortcode="white_check_mark">✅</span></td>
+<td style="text-align:center"><span class="emoji" shortcode="white_check_mark">✅</span></td>
+<td style="text-align:center"><span class="emoji" shortcode="white_check_mark">✅</span></td>
+<td style="text-align:center"><span class="emoji" shortcode="white_check_mark">✅</span></td>
+<td style="text-align:center"><span class="emoji" shortcode="white_check_mark">✅</span></td>
+</tr>
+<tr>
+<td style="text-align:center">2022.3</td>
+<td style="text-align:center"><span class="emoji" shortcode="white_check_mark">✅</span></td>
+<td style="text-align:center"><span class="emoji" shortcode="white_check_mark">✅</span></td>
+<td style="text-align:center"><span class="emoji" shortcode="white_check_mark">✅</span></td>
+<td style="text-align:center"><span class="emoji" shortcode="white_check_mark">✅</span></td>
+<td style="text-align:center"><span class="emoji" shortcode="white_check_mark">✅</span></td>
+<td style="text-align:center"><span class="emoji" shortcode="white_check_mark">✅</span></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><span class="emoji" shortcode="white_check_mark">✅</span> All APIs are supported.</li>
+<li><span class="emoji" shortcode="x">❌</span> Not supported. Use at your own risk.</li>
+</ul>
+<h2 id="common-usages">Common Usages</h2>
+<h3 id="make-a-payment-transaction">Make a payment transaction:</h3>
+<pre><code class="lang-csharp">using Algorand.Unity;
+
+var sender = &quot;&lt;your sender address&gt;&quot;;
+var receiver = &quot;&lt;your receiver address&gt;&quot;;
+var algod = new AlgodClient(&quot;https://testnet-api.algonode.cloud&quot;);
+var suggestedTxnParams = await algod.GetSuggestedParams();
+var microAlgosToSend = 1_000_000L;
+var paymentTxn = Transaction.Payment(sender, suggestedTxnParams, receiver, microAlgosToSend);
+</code></pre><h4 id="sign-the-transaction-with-an-account">Sign the transaction with an account:</h4>
+<pre><code class="lang-csharp">var account = Account.GenerateAccount();
+var signedTxn = account.SignTxn(paymentTxn);
+</code></pre><h4 id="sign-the-transaction-with-kmd">Sign the transaction with <code>kmd</code>:</h4>
+<pre><code class="lang-csharp">var kmd = new KmdClient(&quot;&lt;host of kmd&gt;&quot;);
+var walletToken = await kmd.InitWalletHandleToken(&quot;&lt;your wallet id&gt;&quot;, &quot;&lt;your wallet password&gt;&quot;);
+var signedTxn = await kmd.SignTransaction(paymentTxn.Sender, paymentTxn.ToSignatureMessage(), walletToken, &quot;&lt;your kmd wallet password&gt;&quot;);
+</code></pre><h4 id="send-the-signed-transaction">Send the signed transaction:</h4>
+<pre><code class="lang-csharp">await algod.SendTransaction(signedTxn);
+</code></pre><h2 id="installation">Installation</h2>
+<h3 id="unity-asset-store">Unity Asset Store</h3>
+<p><a href="https://u3d.as/31Er">Algorand SDK for Unity</a> is now available!</p>
+<h3 id="asset-package">Asset Package</h3>
+<p>Each release contains a <code>.unitypackage</code> package file that can be installed into a project.</p>
+<ol>
+<li><a href="https://github.com/CareBoo/unity-algorand-sdk/releases/latest">Download the latest release.</a></li>
+<li><a href="https://docs.unity3d.com/Manual/AssetPackagesImport.html">Import the <code>.unitypackage</code> file into your project.</a></li>
+</ol>
+<h3 id="open-upm">Open UPM</h3>
+<p>The easiest way to install as a package is to use Open UPM as it manages your scopes automatically.
+You can <a href="https://openupm.com/docs/getting-started.html">install Open UPM here</a>.
+Then use the Open UPM CLI at the root of your Unity project to install.</p>
+<pre><code class="lang-sh">&gt; cd &lt;your unity project&gt;
+&gt; openupm add com.careboo.unity-algorand-sdk
+</code></pre><h3 id="manually-adding-upm-scopes">Manually Adding UPM Scopes</h3>
+<p>If you don&#39;t want to use Open UPM, it&#39;s straightforward to manually add the UPM registry scopes
+required for this package. See <a href="https://docs.unity3d.com/Manual/upm-scoped.html">Unity&#39;s official documentation on Scoped Registries</a>.
+Modify your scopes to include the following:</p>
+<pre><code class="lang-json">{
+  &quot;scopedRegistries&quot;: [
+    {
+      &quot;name&quot;: &quot;package.openupm.com&quot;,
+      &quot;url&quot;: &quot;https://package.openupm.com&quot;,
+      &quot;scopes&quot;: [
+        &quot;com.careboo.unity-algorand-sdk&quot;,
+        &quot;com.cysharp.unitask&quot;
+      ]
+    }
+  ]
+}
+</code></pre><h2 id="getting-started">Getting Started</h2>
+<p>Read <a href="manual/getting_started.html">Getting Started</a> to learn the basic workflows for developing on Algorand.</p>
+<h3 id="documentation-site">Documentation Site</h3>
+<p>Docs for this version were generated at <a href="https://careboo.github.io/unity-algorand-sdk/5.1">https://careboo.github.io/unity-algorand-sdk/5.1</a>.</p>
+<h3 id="samples">Samples</h3>
+<p>Some of the samples are built on WebGL and hosted on GitHub Pages.</p>
+<ul>
+<li><a href="https://careboo.github.io/unity-algorand-sdk/your-first-transaction">Your First Transaction</a></li>
+<li><a href="https://careboo.github.io/unity-algorand-sdk/local-wallet">Local Wallet</a></li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/CareBoo/unity-algorand-sdk/blob/main/.docfx/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+              </div>
+          
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <h5>In This Article</h5>
+              <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <div class="pull-left">
+              Generated by DocFX
+              
+            </div>
+            <div class="toggle-mode pull-right visible-sm visible-xs">
+              <div class="icon">
+                <i aria-hidden="true">☀</i>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="switch-style-m">
+                <span class="slider round"></span>
+              </label>
+              <div class="icon">
+                <i aria-hidden="true">☾</i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="styles/toggle-theme.js"></script>
+      </footer>    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>

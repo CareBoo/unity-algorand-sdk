@@ -1,0 +1,1710 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IIndexerClient
+   | Algorand SDK for Unity </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IIndexerClient
+   | Algorand SDK for Unity ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../resources/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../resources/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Algorand.Unity.IIndexerClient">
+  
+  
+  <h1 id="Algorand_Unity_IIndexerClient" data-uid="Algorand.Unity.IIndexerClient" class="text-break">Interface IIndexerClient
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Algorand.Unity.IAlgoApiClient.html#Algorand_Unity_IAlgoApiClient_Address">IAlgoApiClient.Address</a>
+    </div>
+    <div>
+      <a class="xref" href="Algorand.Unity.IAlgoApiClient.html#Algorand_Unity_IAlgoApiClient_Token">IAlgoApiClient.Token</a>
+    </div>
+    <div>
+      <a class="xref" href="Algorand.Unity.IAlgoApiClient.html#Algorand_Unity_IAlgoApiClient_TokenHeader">IAlgoApiClient.TokenHeader</a>
+    </div>
+    <div>
+      <a class="xref" href="Algorand.Unity.IAlgoApiClient.html#Algorand_Unity_IAlgoApiClient_Headers">IAlgoApiClient.Headers</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Algorand.Unity.html">Algorand.Unity</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="Algorand_Unity_IIndexerClient_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IIndexerClient : IAlgoApiClient</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Algorand_Unity_IIndexerClient_LookupAccountAppLocalStates_" data-uid="Algorand.Unity.IIndexerClient.LookupAccountAppLocalStates*"></a>
+  <h4 id="Algorand_Unity_IIndexerClient_LookupAccountAppLocalStates_System_String_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_Boolean__Algorand_Unity_Optional_System_UInt64__System_String_" data-uid="Algorand.Unity.IIndexerClient.LookupAccountAppLocalStates(System.String,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.Boolean},Algorand.Unity.Optional{System.UInt64},System.String)">LookupAccountAppLocalStates(String, Optional&lt;UInt64&gt;, Optional&lt;Boolean&gt;, Optional&lt;UInt64&gt;, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">AlgoApiRequest.Sent&lt;ApplicationLocalStatesResponse&gt; LookupAccountAppLocalStates(string accountId, Optional&lt;ulong&gt; applicationId = default(Optional&lt;ulong&gt;), Optional&lt;bool&gt; includeAll = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), string next = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">accountId</span></td>
+        <td><p>account string</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">applicationId</span></td>
+        <td><p>Application ID</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">includeAll</span></td>
+        <td><p>Include all items including closed accounts, deleted applications, destroyed assets, opted-out asset holdings, and closed-out application localstates.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">limit</span></td>
+        <td><p>Maximum number of results to return. There could be additional pages even if the limit is not reached.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">next</span></td>
+        <td><p>The next page of results. Use the next token provided by the previous results.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<span class="xref">ApplicationLocalStatesResponse</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Algorand_Unity_IIndexerClient_LookupAccountAppLocalStates_System_String_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_Boolean__Algorand_Unity_Optional_System_UInt64__System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Lookup an account&apos;s asset holdings, optionally for a specific ID.</p>
+</div>
+  
+  
+  <a id="Algorand_Unity_IIndexerClient_LookupAccountAssets_" data-uid="Algorand.Unity.IIndexerClient.LookupAccountAssets*"></a>
+  <h4 id="Algorand_Unity_IIndexerClient_LookupAccountAssets_System_String_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_Boolean__Algorand_Unity_Optional_System_UInt64__System_String_" data-uid="Algorand.Unity.IIndexerClient.LookupAccountAssets(System.String,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.Boolean},Algorand.Unity.Optional{System.UInt64},System.String)">LookupAccountAssets(String, Optional&lt;UInt64&gt;, Optional&lt;Boolean&gt;, Optional&lt;UInt64&gt;, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">AlgoApiRequest.Sent&lt;AssetHoldingsResponse&gt; LookupAccountAssets(string accountId, Optional&lt;ulong&gt; assetId = default(Optional&lt;ulong&gt;), Optional&lt;bool&gt; includeAll = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), string next = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">accountId</span></td>
+        <td><p>account string</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">assetId</span></td>
+        <td><p>Asset ID</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">includeAll</span></td>
+        <td><p>Include all items including closed accounts, deleted applications, destroyed assets, opted-out asset holdings, and closed-out application localstates.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">limit</span></td>
+        <td><p>Maximum number of results to return. There could be additional pages even if the limit is not reached.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">next</span></td>
+        <td><p>The next page of results. Use the next token provided by the previous results.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<span class="xref">AssetHoldingsResponse</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Algorand_Unity_IIndexerClient_LookupAccountAssets_System_String_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_Boolean__Algorand_Unity_Optional_System_UInt64__System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Lookup an account&apos;s asset holdings, optionally for a specific ID.</p>
+</div>
+  
+  
+  <a id="Algorand_Unity_IIndexerClient_LookupAccountByID_" data-uid="Algorand.Unity.IIndexerClient.LookupAccountByID*"></a>
+  <h4 id="Algorand_Unity_IIndexerClient_LookupAccountByID_System_String_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_Boolean__Algorand_Unity_ExcludeAccountFields_" data-uid="Algorand.Unity.IIndexerClient.LookupAccountByID(System.String,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.Boolean},Algorand.Unity.ExcludeAccountFields)">LookupAccountByID(String, Optional&lt;UInt64&gt;, Optional&lt;Boolean&gt;, ExcludeAccountFields)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">AlgoApiRequest.Sent&lt;AccountResponse&gt; LookupAccountByID(string accountId, Optional&lt;ulong&gt; round = default(Optional&lt;ulong&gt;), Optional&lt;bool&gt; includeAll = default(Optional&lt;bool&gt;), ExcludeAccountFields exclude = ExcludeAccountFields.Unknown)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">accountId</span></td>
+        <td><p>account string</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">round</span></td>
+        <td><p>Include results for the specified round.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">includeAll</span></td>
+        <td><p>Include all items including closed accounts, deleted applications, destroyed assets, opted-out asset holdings, and closed-out application localstates.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.ExcludeAccountFields.html">ExcludeAccountFields</a></td>
+        <td><span class="parametername">exclude</span></td>
+        <td><p>Exclude additional items such as asset holdings, application local data stored for this account, asset parameters created by this account, and application parameters created by this account.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<span class="xref">AccountResponse</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Algorand_Unity_IIndexerClient_LookupAccountByID_System_String_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_Boolean__Algorand_Unity_ExcludeAccountFields__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Lookup account information.</p>
+</div>
+  
+  
+  <a id="Algorand_Unity_IIndexerClient_LookupAccountCreatedApplications_" data-uid="Algorand.Unity.IIndexerClient.LookupAccountCreatedApplications*"></a>
+  <h4 id="Algorand_Unity_IIndexerClient_LookupAccountCreatedApplications_System_String_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_Boolean__Algorand_Unity_Optional_System_UInt64__System_String_" data-uid="Algorand.Unity.IIndexerClient.LookupAccountCreatedApplications(System.String,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.Boolean},Algorand.Unity.Optional{System.UInt64},System.String)">LookupAccountCreatedApplications(String, Optional&lt;UInt64&gt;, Optional&lt;Boolean&gt;, Optional&lt;UInt64&gt;, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">AlgoApiRequest.Sent&lt;ApplicationsResponse&gt; LookupAccountCreatedApplications(string accountId, Optional&lt;ulong&gt; applicationId = default(Optional&lt;ulong&gt;), Optional&lt;bool&gt; includeAll = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), string next = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">accountId</span></td>
+        <td><p>account string</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">applicationId</span></td>
+        <td><p>Application ID</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">includeAll</span></td>
+        <td><p>Include all items including closed accounts, deleted applications, destroyed assets, opted-out asset holdings, and closed-out application localstates.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">limit</span></td>
+        <td><p>Maximum number of results to return. There could be additional pages even if the limit is not reached.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">next</span></td>
+        <td><p>The next page of results. Use the next token provided by the previous results.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<span class="xref">ApplicationsResponse</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Algorand_Unity_IIndexerClient_LookupAccountCreatedApplications_System_String_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_Boolean__Algorand_Unity_Optional_System_UInt64__System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Lookup an account&apos;s created application parameters, optionally for a specific ID.</p>
+</div>
+  
+  
+  <a id="Algorand_Unity_IIndexerClient_LookupAccountCreatedAssets_" data-uid="Algorand.Unity.IIndexerClient.LookupAccountCreatedAssets*"></a>
+  <h4 id="Algorand_Unity_IIndexerClient_LookupAccountCreatedAssets_System_String_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_Boolean__Algorand_Unity_Optional_System_UInt64__System_String_" data-uid="Algorand.Unity.IIndexerClient.LookupAccountCreatedAssets(System.String,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.Boolean},Algorand.Unity.Optional{System.UInt64},System.String)">LookupAccountCreatedAssets(String, Optional&lt;UInt64&gt;, Optional&lt;Boolean&gt;, Optional&lt;UInt64&gt;, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">AlgoApiRequest.Sent&lt;AssetsResponse&gt; LookupAccountCreatedAssets(string accountId, Optional&lt;ulong&gt; assetId = default(Optional&lt;ulong&gt;), Optional&lt;bool&gt; includeAll = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), string next = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">accountId</span></td>
+        <td><p>account string</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">assetId</span></td>
+        <td><p>Asset ID</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">includeAll</span></td>
+        <td><p>Include all items including closed accounts, deleted applications, destroyed assets, opted-out asset holdings, and closed-out application localstates.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">limit</span></td>
+        <td><p>Maximum number of results to return. There could be additional pages even if the limit is not reached.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">next</span></td>
+        <td><p>The next page of results. Use the next token provided by the previous results.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<span class="xref">AssetsResponse</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Algorand_Unity_IIndexerClient_LookupAccountCreatedAssets_System_String_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_Boolean__Algorand_Unity_Optional_System_UInt64__System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Lookup an account&apos;s created asset parameters, optionally for a specific ID.</p>
+</div>
+  
+  
+  <a id="Algorand_Unity_IIndexerClient_LookupAccountTransactions_" data-uid="Algorand.Unity.IIndexerClient.LookupAccountTransactions*"></a>
+  <h4 id="Algorand_Unity_IIndexerClient_LookupAccountTransactions_System_String_System_Byte___Algorand_Unity_Optional_System_Boolean__System_String_Algorand_Unity_Optional_System_UInt64__DateTime_System_String_Algorand_Unity_Optional_System_UInt64__DateTime_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_SignatureType_System_String_Algorand_Unity_Optional_System_UInt64__" data-uid="Algorand.Unity.IIndexerClient.LookupAccountTransactions(System.String,System.Byte[],Algorand.Unity.Optional{System.Boolean},System.String,Algorand.Unity.Optional{System.UInt64},DateTime,System.String,Algorand.Unity.Optional{System.UInt64},DateTime,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.SignatureType,System.String,Algorand.Unity.Optional{System.UInt64})">LookupAccountTransactions(String, Byte[], Optional&lt;Boolean&gt;, String, Optional&lt;UInt64&gt;, DateTime, String, Optional&lt;UInt64&gt;, DateTime, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, SignatureType, String, Optional&lt;UInt64&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">AlgoApiRequest.Sent&lt;TransactionsResponse&gt; LookupAccountTransactions(string accountId, byte[] notePrefix = null, Optional&lt;bool&gt; rekeyTo = default(Optional&lt;bool&gt;), string next = null, Optional&lt;ulong&gt; maxRound = default(Optional&lt;ulong&gt;), DateTime afterTime = null, string txType = null, Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), DateTime beforeTime = null, Optional&lt;ulong&gt; minRound = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; currencyGreaterThan = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; assetId = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; currencyLessThan = default(Optional&lt;ulong&gt;), SignatureType sigType = SignatureType.None, string txid = null, Optional&lt;ulong&gt; round = default(Optional&lt;ulong&gt;))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">accountId</span></td>
+        <td><p>account string</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">notePrefix</span></td>
+        <td><p>Specifies a prefix which must be contained in the note field.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">rekeyTo</span></td>
+        <td><p>Include results which include the rekey-to field.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">next</span></td>
+        <td><p>The next page of results. Use the next token provided by the previous results.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">maxRound</span></td>
+        <td><p>Include results at or before the specified max-round.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">DateTime</span></td>
+        <td><span class="parametername">afterTime</span></td>
+        <td><p>Include results after the given time. Must be an RFC 3339 formatted string.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">txType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">limit</span></td>
+        <td><p>Maximum number of results to return. There could be additional pages even if the limit is not reached.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">DateTime</span></td>
+        <td><span class="parametername">beforeTime</span></td>
+        <td><p>Include results before the given time. Must be an RFC 3339 formatted string.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">minRound</span></td>
+        <td><p>Include results at or after the specified min-round.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">currencyGreaterThan</span></td>
+        <td><p>Results should have an amount greater than this value. MicroAlgos are the default currency unless an asset-id is provided, in which case the asset will be used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">assetId</span></td>
+        <td><p>Asset ID</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">currencyLessThan</span></td>
+        <td><p>Results should have an amount less than this value. MicroAlgos are the default currency unless an asset-id is provided, in which case the asset will be used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.SignatureType.html">SignatureType</a></td>
+        <td><span class="parametername">sigType</span></td>
+        <td><p>SigType filters just results using the specified type of signature:</p>
+<ul>
+<li>sig - Standard</li>
+<li>msig - MultiSig</li>
+<li>lsig - LogicSig</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">txid</span></td>
+        <td><p>Lookup the specific transaction by ID.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">round</span></td>
+        <td><p>Include results for the specified round.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<span class="xref">TransactionsResponse</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Algorand_Unity_IIndexerClient_LookupAccountTransactions_System_String_System_Byte___Algorand_Unity_Optional_System_Boolean__System_String_Algorand_Unity_Optional_System_UInt64__DateTime_System_String_Algorand_Unity_Optional_System_UInt64__DateTime_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_SignatureType_System_String_Algorand_Unity_Optional_System_UInt64___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Lookup account transactions. Transactions are returned newest to oldest.</p>
+</div>
+  
+  
+  <a id="Algorand_Unity_IIndexerClient_LookupApplicationBoxByIDAndName_" data-uid="Algorand.Unity.IIndexerClient.LookupApplicationBoxByIDAndName*"></a>
+  <h4 id="Algorand_Unity_IIndexerClient_LookupApplicationBoxByIDAndName_System_UInt64_System_String_" data-uid="Algorand.Unity.IIndexerClient.LookupApplicationBoxByIDAndName(System.UInt64,System.String)">LookupApplicationBoxByIDAndName(UInt64, String)</h4>
+  <div class="markdown level1 summary"><p>Get box information for a given application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">AlgoApiRequest.Sent&lt;BoxResponse&gt; LookupApplicationBoxByIDAndName(ulong applicationId, string boxName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">applicationId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">boxName</span></td>
+        <td><p>A box name in goal-arg form &apos;encoding:value&apos;. For ints, use the form &apos;int:1234&apos;. For raw bytes, use the form &apos;b64:A==&apos;. For printable strings, use the form &apos;str:hello&apos;. For addresses, use the form &apos;addr:XYZ...&apos;.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<span class="xref">BoxResponse</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Algorand_Unity_IIndexerClient_LookupApplicationBoxByIDAndName_System_UInt64_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Given an application ID and box name, returns base64 encoded box name and value. Box names must be in the goal app call arg form &apos;encoding:value&apos;. For ints, use the form &apos;int:1234&apos;. For raw bytes, encode base 64 and use &apos;b64&apos; prefix as in &apos;b64:A==&apos;. For printable strings, use the form &apos;str:hello&apos;. For addresses, use the form &apos;addr:XYZ...&apos;.</p>
+</div>
+  
+  
+  <a id="Algorand_Unity_IIndexerClient_LookupApplicationByID_" data-uid="Algorand.Unity.IIndexerClient.LookupApplicationByID*"></a>
+  <h4 id="Algorand_Unity_IIndexerClient_LookupApplicationByID_System_UInt64_Algorand_Unity_Optional_System_Boolean__" data-uid="Algorand.Unity.IIndexerClient.LookupApplicationByID(System.UInt64,Algorand.Unity.Optional{System.Boolean})">LookupApplicationByID(UInt64, Optional&lt;Boolean&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">AlgoApiRequest.Sent&lt;ApplicationResponse&gt; LookupApplicationByID(ulong applicationId, Optional&lt;bool&gt; includeAll = default(Optional&lt;bool&gt;))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">applicationId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">includeAll</span></td>
+        <td><p>Include all items including closed accounts, deleted applications, destroyed assets, opted-out asset holdings, and closed-out application localstates.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<span class="xref">ApplicationResponse</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Algorand_Unity_IIndexerClient_LookupApplicationByID_System_UInt64_Algorand_Unity_Optional_System_Boolean___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Lookup application.</p>
+</div>
+  
+  
+  <a id="Algorand_Unity_IIndexerClient_LookupApplicationLogsByID_" data-uid="Algorand.Unity.IIndexerClient.LookupApplicationLogsByID*"></a>
+  <h4 id="Algorand_Unity_IIndexerClient_LookupApplicationLogsByID_System_UInt64_Algorand_Unity_Optional_System_UInt64__System_String_System_String_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Address_" data-uid="Algorand.Unity.IIndexerClient.LookupApplicationLogsByID(System.UInt64,Algorand.Unity.Optional{System.UInt64},System.String,System.String,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Address)">LookupApplicationLogsByID(UInt64, Optional&lt;UInt64&gt;, String, String, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Address)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">AlgoApiRequest.Sent&lt;ApplicationLogsResponse&gt; LookupApplicationLogsByID(ulong applicationId, Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), string next = null, string txid = null, Optional&lt;ulong&gt; minRound = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; maxRound = default(Optional&lt;ulong&gt;), Address senderAddress = default(Address))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">applicationId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">limit</span></td>
+        <td><p>Maximum number of results to return. There could be additional pages even if the limit is not reached.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">next</span></td>
+        <td><p>The next page of results. Use the next token provided by the previous results.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">txid</span></td>
+        <td><p>Lookup the specific transaction by ID.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">minRound</span></td>
+        <td><p>Include results at or after the specified min-round.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">maxRound</span></td>
+        <td><p>Include results at or before the specified max-round.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a></td>
+        <td><span class="parametername">senderAddress</span></td>
+        <td><p>Only include transactions with this sender address.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<span class="xref">ApplicationLogsResponse</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Algorand_Unity_IIndexerClient_LookupApplicationLogsByID_System_UInt64_Algorand_Unity_Optional_System_UInt64__System_String_System_String_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Address__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Lookup application logs.</p>
+</div>
+  
+  
+  <a id="Algorand_Unity_IIndexerClient_LookupAssetBalances_" data-uid="Algorand.Unity.IIndexerClient.LookupAssetBalances*"></a>
+  <h4 id="Algorand_Unity_IIndexerClient_LookupAssetBalances_System_UInt64_Algorand_Unity_Optional_System_Boolean__Algorand_Unity_Optional_System_UInt64__System_String_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__" data-uid="Algorand.Unity.IIndexerClient.LookupAssetBalances(System.UInt64,Algorand.Unity.Optional{System.Boolean},Algorand.Unity.Optional{System.UInt64},System.String,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64})">LookupAssetBalances(UInt64, Optional&lt;Boolean&gt;, Optional&lt;UInt64&gt;, String, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">AlgoApiRequest.Sent&lt;AssetBalancesResponse&gt; LookupAssetBalances(ulong assetId, Optional&lt;bool&gt; includeAll = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), string next = null, Optional&lt;ulong&gt; currencyGreaterThan = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; currencyLessThan = default(Optional&lt;ulong&gt;))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">assetId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">includeAll</span></td>
+        <td><p>Include all items including closed accounts, deleted applications, destroyed assets, opted-out asset holdings, and closed-out application localstates.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">limit</span></td>
+        <td><p>Maximum number of results to return. There could be additional pages even if the limit is not reached.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">next</span></td>
+        <td><p>The next page of results. Use the next token provided by the previous results.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">currencyGreaterThan</span></td>
+        <td><p>Results should have an amount greater than this value. MicroAlgos are the default currency unless an asset-id is provided, in which case the asset will be used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">currencyLessThan</span></td>
+        <td><p>Results should have an amount less than this value. MicroAlgos are the default currency unless an asset-id is provided, in which case the asset will be used.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<span class="xref">AssetBalancesResponse</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Algorand_Unity_IIndexerClient_LookupAssetBalances_System_UInt64_Algorand_Unity_Optional_System_Boolean__Algorand_Unity_Optional_System_UInt64__System_String_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Lookup the list of accounts who hold this asset </p>
+</div>
+  
+  
+  <a id="Algorand_Unity_IIndexerClient_LookupAssetByID_" data-uid="Algorand.Unity.IIndexerClient.LookupAssetByID*"></a>
+  <h4 id="Algorand_Unity_IIndexerClient_LookupAssetByID_System_UInt64_Algorand_Unity_Optional_System_Boolean__" data-uid="Algorand.Unity.IIndexerClient.LookupAssetByID(System.UInt64,Algorand.Unity.Optional{System.Boolean})">LookupAssetByID(UInt64, Optional&lt;Boolean&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">AlgoApiRequest.Sent&lt;AssetResponse&gt; LookupAssetByID(ulong assetId, Optional&lt;bool&gt; includeAll = default(Optional&lt;bool&gt;))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">assetId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">includeAll</span></td>
+        <td><p>Include all items including closed accounts, deleted applications, destroyed assets, opted-out asset holdings, and closed-out application localstates.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<span class="xref">AssetResponse</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Algorand_Unity_IIndexerClient_LookupAssetByID_System_UInt64_Algorand_Unity_Optional_System_Boolean___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Lookup asset information.</p>
+</div>
+  
+  
+  <a id="Algorand_Unity_IIndexerClient_LookupAssetTransactions_" data-uid="Algorand.Unity.IIndexerClient.LookupAssetTransactions*"></a>
+  <h4 id="Algorand_Unity_IIndexerClient_LookupAssetTransactions_System_UInt64_System_Byte___Algorand_Unity_Optional_System_Boolean__System_String_Algorand_Unity_Optional_System_UInt64__DateTime_System_String_Algorand_Unity_Optional_System_Boolean__Algorand_Unity_Optional_System_UInt64__DateTime_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Address_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_SignatureType_System_String_Algorand_Unity_AddressRole_Algorand_Unity_Optional_System_UInt64__" data-uid="Algorand.Unity.IIndexerClient.LookupAssetTransactions(System.UInt64,System.Byte[],Algorand.Unity.Optional{System.Boolean},System.String,Algorand.Unity.Optional{System.UInt64},DateTime,System.String,Algorand.Unity.Optional{System.Boolean},Algorand.Unity.Optional{System.UInt64},DateTime,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Address,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.SignatureType,System.String,Algorand.Unity.AddressRole,Algorand.Unity.Optional{System.UInt64})">LookupAssetTransactions(UInt64, Byte[], Optional&lt;Boolean&gt;, String, Optional&lt;UInt64&gt;, DateTime, String, Optional&lt;Boolean&gt;, Optional&lt;UInt64&gt;, DateTime, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Address, Optional&lt;UInt64&gt;, SignatureType, String, AddressRole, Optional&lt;UInt64&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">AlgoApiRequest.Sent&lt;TransactionsResponse&gt; LookupAssetTransactions(ulong assetId, byte[] notePrefix = null, Optional&lt;bool&gt; rekeyTo = default(Optional&lt;bool&gt;), string next = null, Optional&lt;ulong&gt; maxRound = default(Optional&lt;ulong&gt;), DateTime afterTime = null, string txType = null, Optional&lt;bool&gt; excludeCloseTo = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), DateTime beforeTime = null, Optional&lt;ulong&gt; minRound = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; currencyGreaterThan = default(Optional&lt;ulong&gt;), Address address = default(Address), Optional&lt;ulong&gt; currencyLessThan = default(Optional&lt;ulong&gt;), SignatureType sigType = SignatureType.None, string txid = null, AddressRole addressRole = AddressRole.None, Optional&lt;ulong&gt; round = default(Optional&lt;ulong&gt;))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">assetId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">notePrefix</span></td>
+        <td><p>Specifies a prefix which must be contained in the note field.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">rekeyTo</span></td>
+        <td><p>Include results which include the rekey-to field.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">next</span></td>
+        <td><p>The next page of results. Use the next token provided by the previous results.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">maxRound</span></td>
+        <td><p>Include results at or before the specified max-round.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">DateTime</span></td>
+        <td><span class="parametername">afterTime</span></td>
+        <td><p>Include results after the given time. Must be an RFC 3339 formatted string.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">txType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">excludeCloseTo</span></td>
+        <td><p>Combine with address and address-role parameters to define what type of address to search for. The close to fields are normally treated as a receiver, if you would like to exclude them set this parameter to true.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">limit</span></td>
+        <td><p>Maximum number of results to return. There could be additional pages even if the limit is not reached.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">DateTime</span></td>
+        <td><span class="parametername">beforeTime</span></td>
+        <td><p>Include results before the given time. Must be an RFC 3339 formatted string.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">minRound</span></td>
+        <td><p>Include results at or after the specified min-round.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">currencyGreaterThan</span></td>
+        <td><p>Results should have an amount greater than this value. MicroAlgos are the default currency unless an asset-id is provided, in which case the asset will be used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a></td>
+        <td><span class="parametername">address</span></td>
+        <td><p>Only include transactions with this address in one of the transaction fields.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">currencyLessThan</span></td>
+        <td><p>Results should have an amount less than this value. MicroAlgos are the default currency unless an asset-id is provided, in which case the asset will be used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.SignatureType.html">SignatureType</a></td>
+        <td><span class="parametername">sigType</span></td>
+        <td><p>SigType filters just results using the specified type of signature:</p>
+<ul>
+<li>sig - Standard</li>
+<li>msig - MultiSig</li>
+<li>lsig - LogicSig</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">txid</span></td>
+        <td><p>Lookup the specific transaction by ID.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AddressRole.html">AddressRole</a></td>
+        <td><span class="parametername">addressRole</span></td>
+        <td><p>Combine with the address parameter to define what type of address to search for.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">round</span></td>
+        <td><p>Include results for the specified round.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<span class="xref">TransactionsResponse</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Algorand_Unity_IIndexerClient_LookupAssetTransactions_System_UInt64_System_Byte___Algorand_Unity_Optional_System_Boolean__System_String_Algorand_Unity_Optional_System_UInt64__DateTime_System_String_Algorand_Unity_Optional_System_Boolean__Algorand_Unity_Optional_System_UInt64__DateTime_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Address_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_SignatureType_System_String_Algorand_Unity_AddressRole_Algorand_Unity_Optional_System_UInt64___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Lookup transactions for an asset. Transactions are returned oldest to newest.</p>
+</div>
+  
+  
+  <a id="Algorand_Unity_IIndexerClient_LookupBlock_" data-uid="Algorand.Unity.IIndexerClient.LookupBlock*"></a>
+  <h4 id="Algorand_Unity_IIndexerClient_LookupBlock_System_UInt64_Algorand_Unity_Optional_System_Boolean__" data-uid="Algorand.Unity.IIndexerClient.LookupBlock(System.UInt64,Algorand.Unity.Optional{System.Boolean})">LookupBlock(UInt64, Optional&lt;Boolean&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">AlgoApiRequest.Sent&lt;BlockResponse&gt; LookupBlock(ulong roundNumber, Optional&lt;bool&gt; headerOnly = default(Optional&lt;bool&gt;))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">roundNumber</span></td>
+        <td><p>Round number</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">headerOnly</span></td>
+        <td><p>Header only flag. When this is set to true, returned block does not contain the transactions</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="Algorand.Unity.BlockResponse.html">BlockResponse</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Algorand_Unity_IIndexerClient_LookupBlock_System_UInt64_Algorand_Unity_Optional_System_Boolean___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Lookup block.</p>
+</div>
+  
+  
+  <a id="Algorand_Unity_IIndexerClient_LookupTransaction_" data-uid="Algorand.Unity.IIndexerClient.LookupTransaction*"></a>
+  <h4 id="Algorand_Unity_IIndexerClient_LookupTransaction_System_String_" data-uid="Algorand.Unity.IIndexerClient.LookupTransaction(System.String)">LookupTransaction(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">AlgoApiRequest.Sent&lt;TransactionResponse&gt; LookupTransaction(string txid)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">txid</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<span class="xref">TransactionResponse</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Algorand_Unity_IIndexerClient_LookupTransaction_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Lookup a single transaction.</p>
+</div>
+  
+  
+  <a id="Algorand_Unity_IIndexerClient_MakeHealthCheck_" data-uid="Algorand.Unity.IIndexerClient.MakeHealthCheck*"></a>
+  <h4 id="Algorand_Unity_IIndexerClient_MakeHealthCheck" data-uid="Algorand.Unity.IIndexerClient.MakeHealthCheck">MakeHealthCheck()</h4>
+  <div class="markdown level1 summary"><p>Returns 200 if healthy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">AlgoApiRequest.Sent&lt;HealthCheckResponse&gt; MakeHealthCheck()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<span class="xref">HealthCheckResponse</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_IIndexerClient_SearchForAccounts_" data-uid="Algorand.Unity.IIndexerClient.SearchForAccounts*"></a>
+  <h4 id="Algorand_Unity_IIndexerClient_SearchForAccounts_System_String_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Address_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_ExcludeAccountFields_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_Boolean__" data-uid="Algorand.Unity.IIndexerClient.SearchForAccounts(System.String,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Address,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.ExcludeAccountFields,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.Boolean})">SearchForAccounts(String, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Address, Optional&lt;UInt64&gt;, ExcludeAccountFields, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;Boolean&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">AlgoApiRequest.Sent&lt;AccountsResponse&gt; SearchForAccounts(string next = null, Optional&lt;ulong&gt; applicationId = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; currencyGreaterThan = default(Optional&lt;ulong&gt;), Address authAddr = default(Address), Optional&lt;ulong&gt; assetId = default(Optional&lt;ulong&gt;), ExcludeAccountFields exclude = ExcludeAccountFields.Unknown, Optional&lt;ulong&gt; currencyLessThan = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; round = default(Optional&lt;ulong&gt;), Optional&lt;bool&gt; includeAll = default(Optional&lt;bool&gt;))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">next</span></td>
+        <td><p>The next page of results. Use the next token provided by the previous results.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">applicationId</span></td>
+        <td><p>Application ID</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">limit</span></td>
+        <td><p>Maximum number of results to return. There could be additional pages even if the limit is not reached.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">currencyGreaterThan</span></td>
+        <td><p>Results should have an amount greater than this value. MicroAlgos are the default currency unless an asset-id is provided, in which case the asset will be used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a></td>
+        <td><span class="parametername">authAddr</span></td>
+        <td><p>Include accounts configured to use this spending key.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">assetId</span></td>
+        <td><p>Asset ID</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.ExcludeAccountFields.html">ExcludeAccountFields</a></td>
+        <td><span class="parametername">exclude</span></td>
+        <td><p>Exclude additional items such as asset holdings, application local data stored for this account, asset parameters created by this account, and application parameters created by this account.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">currencyLessThan</span></td>
+        <td><p>Results should have an amount less than this value. MicroAlgos are the default currency unless an asset-id is provided, in which case the asset will be used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">round</span></td>
+        <td><p>Include results for the specified round. For performance reasons, this parameter may be disabled on some configurations. Using application-id or asset-id filters will return both creator and opt-in accounts. Filtering by include-all will return creator and opt-in accounts for deleted assets and accounts. Non-opt-in managers are not included in the results when asset-id is used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">includeAll</span></td>
+        <td><p>Include all items including closed accounts, deleted applications, destroyed assets, opted-out asset holdings, and closed-out application localstates.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<span class="xref">AccountsResponse</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Algorand_Unity_IIndexerClient_SearchForAccounts_System_String_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Address_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_ExcludeAccountFields_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_Boolean___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Search for accounts.</p>
+</div>
+  
+  
+  <a id="Algorand_Unity_IIndexerClient_SearchForApplicationBoxes_" data-uid="Algorand.Unity.IIndexerClient.SearchForApplicationBoxes*"></a>
+  <h4 id="Algorand_Unity_IIndexerClient_SearchForApplicationBoxes_System_UInt64_Algorand_Unity_Optional_System_UInt64__System_String_" data-uid="Algorand.Unity.IIndexerClient.SearchForApplicationBoxes(System.UInt64,Algorand.Unity.Optional{System.UInt64},System.String)">SearchForApplicationBoxes(UInt64, Optional&lt;UInt64&gt;, String)</h4>
+  <div class="markdown level1 summary"><p>Get box names for a given application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">AlgoApiRequest.Sent&lt;BoxesResponse&gt; SearchForApplicationBoxes(ulong applicationId, Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), string next = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">applicationId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">limit</span></td>
+        <td><p>Maximum number of results to return. There could be additional pages even if the limit is not reached.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">next</span></td>
+        <td><p>The next page of results. Use the next token provided by the previous results.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<span class="xref">BoxesResponse</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Algorand_Unity_IIndexerClient_SearchForApplicationBoxes_System_UInt64_Algorand_Unity_Optional_System_UInt64__System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Given an application ID, returns the box names of that application sorted lexicographically.</p>
+</div>
+  
+  
+  <a id="Algorand_Unity_IIndexerClient_SearchForApplications_" data-uid="Algorand.Unity.IIndexerClient.SearchForApplications*"></a>
+  <h4 id="Algorand_Unity_IIndexerClient_SearchForApplications_Algorand_Unity_Optional_System_UInt64__System_String_Algorand_Unity_Optional_System_Boolean__Algorand_Unity_Optional_System_UInt64__System_String_" data-uid="Algorand.Unity.IIndexerClient.SearchForApplications(Algorand.Unity.Optional{System.UInt64},System.String,Algorand.Unity.Optional{System.Boolean},Algorand.Unity.Optional{System.UInt64},System.String)">SearchForApplications(Optional&lt;UInt64&gt;, String, Optional&lt;Boolean&gt;, Optional&lt;UInt64&gt;, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">AlgoApiRequest.Sent&lt;ApplicationsResponse&gt; SearchForApplications(Optional&lt;ulong&gt; applicationId = default(Optional&lt;ulong&gt;), string creator = null, Optional&lt;bool&gt; includeAll = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), string next = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">applicationId</span></td>
+        <td><p>Application ID</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">creator</span></td>
+        <td><p>Filter just applications with the given creator address.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">includeAll</span></td>
+        <td><p>Include all items including closed accounts, deleted applications, destroyed assets, opted-out asset holdings, and closed-out application localstates.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">limit</span></td>
+        <td><p>Maximum number of results to return. There could be additional pages even if the limit is not reached.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">next</span></td>
+        <td><p>The next page of results. Use the next token provided by the previous results.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<span class="xref">ApplicationsResponse</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Algorand_Unity_IIndexerClient_SearchForApplications_Algorand_Unity_Optional_System_UInt64__System_String_Algorand_Unity_Optional_System_Boolean__Algorand_Unity_Optional_System_UInt64__System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Search for applications</p>
+</div>
+  
+  
+  <a id="Algorand_Unity_IIndexerClient_SearchForAssets_" data-uid="Algorand.Unity.IIndexerClient.SearchForAssets*"></a>
+  <h4 id="Algorand_Unity_IIndexerClient_SearchForAssets_Algorand_Unity_Optional_System_Boolean__Algorand_Unity_Optional_System_UInt64__System_String_System_String_System_String_System_String_Algorand_Unity_Optional_System_UInt64__" data-uid="Algorand.Unity.IIndexerClient.SearchForAssets(Algorand.Unity.Optional{System.Boolean},Algorand.Unity.Optional{System.UInt64},System.String,System.String,System.String,System.String,Algorand.Unity.Optional{System.UInt64})">SearchForAssets(Optional&lt;Boolean&gt;, Optional&lt;UInt64&gt;, String, String, String, String, Optional&lt;UInt64&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">AlgoApiRequest.Sent&lt;AssetsResponse&gt; SearchForAssets(Optional&lt;bool&gt; includeAll = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), string next = null, string creator = null, string name = null, string unit = null, Optional&lt;ulong&gt; assetId = default(Optional&lt;ulong&gt;))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">includeAll</span></td>
+        <td><p>Include all items including closed accounts, deleted applications, destroyed assets, opted-out asset holdings, and closed-out application localstates.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">limit</span></td>
+        <td><p>Maximum number of results to return. There could be additional pages even if the limit is not reached.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">next</span></td>
+        <td><p>The next page of results. Use the next token provided by the previous results.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">creator</span></td>
+        <td><p>Filter just assets with the given creator address.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Filter just assets with the given name.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">unit</span></td>
+        <td><p>Filter just assets with the given unit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">assetId</span></td>
+        <td><p>Asset ID</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<span class="xref">AssetsResponse</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Algorand_Unity_IIndexerClient_SearchForAssets_Algorand_Unity_Optional_System_Boolean__Algorand_Unity_Optional_System_UInt64__System_String_System_String_System_String_System_String_Algorand_Unity_Optional_System_UInt64___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Search for assets.</p>
+</div>
+  
+  
+  <a id="Algorand_Unity_IIndexerClient_SearchForTransactions_" data-uid="Algorand.Unity.IIndexerClient.SearchForTransactions*"></a>
+  <h4 id="Algorand_Unity_IIndexerClient_SearchForTransactions_System_Byte___Algorand_Unity_Optional_System_Boolean__System_String_Algorand_Unity_Optional_System_UInt64__DateTime_Algorand_Unity_Optional_System_UInt64__System_String_Algorand_Unity_Optional_System_Boolean__Algorand_Unity_Optional_System_UInt64__DateTime_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Address_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_SignatureType_System_String_Algorand_Unity_AddressRole_Algorand_Unity_Optional_System_UInt64__" data-uid="Algorand.Unity.IIndexerClient.SearchForTransactions(System.Byte[],Algorand.Unity.Optional{System.Boolean},System.String,Algorand.Unity.Optional{System.UInt64},DateTime,Algorand.Unity.Optional{System.UInt64},System.String,Algorand.Unity.Optional{System.Boolean},Algorand.Unity.Optional{System.UInt64},DateTime,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Address,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.SignatureType,System.String,Algorand.Unity.AddressRole,Algorand.Unity.Optional{System.UInt64})">SearchForTransactions(Byte[], Optional&lt;Boolean&gt;, String, Optional&lt;UInt64&gt;, DateTime, Optional&lt;UInt64&gt;, String, Optional&lt;Boolean&gt;, Optional&lt;UInt64&gt;, DateTime, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Address, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, SignatureType, String, AddressRole, Optional&lt;UInt64&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">AlgoApiRequest.Sent&lt;TransactionsResponse&gt; SearchForTransactions(byte[] notePrefix = null, Optional&lt;bool&gt; rekeyTo = default(Optional&lt;bool&gt;), string next = null, Optional&lt;ulong&gt; maxRound = default(Optional&lt;ulong&gt;), DateTime afterTime = null, Optional&lt;ulong&gt; applicationId = default(Optional&lt;ulong&gt;), string txType = null, Optional&lt;bool&gt; excludeCloseTo = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), DateTime beforeTime = null, Optional&lt;ulong&gt; minRound = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; currencyGreaterThan = default(Optional&lt;ulong&gt;), Address address = default(Address), Optional&lt;ulong&gt; assetId = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; currencyLessThan = default(Optional&lt;ulong&gt;), SignatureType sigType = SignatureType.None, string txid = null, AddressRole addressRole = AddressRole.None, Optional&lt;ulong&gt; round = default(Optional&lt;ulong&gt;))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">notePrefix</span></td>
+        <td><p>Specifies a prefix which must be contained in the note field.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">rekeyTo</span></td>
+        <td><p>Include results which include the rekey-to field.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">next</span></td>
+        <td><p>The next page of results. Use the next token provided by the previous results.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">maxRound</span></td>
+        <td><p>Include results at or before the specified max-round.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">DateTime</span></td>
+        <td><span class="parametername">afterTime</span></td>
+        <td><p>Include results after the given time. Must be an RFC 3339 formatted string.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">applicationId</span></td>
+        <td><p>Application ID</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">txType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">excludeCloseTo</span></td>
+        <td><p>Combine with address and address-role parameters to define what type of address to search for. The close to fields are normally treated as a receiver, if you would like to exclude them set this parameter to true.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">limit</span></td>
+        <td><p>Maximum number of results to return. There could be additional pages even if the limit is not reached.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">DateTime</span></td>
+        <td><span class="parametername">beforeTime</span></td>
+        <td><p>Include results before the given time. Must be an RFC 3339 formatted string.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">minRound</span></td>
+        <td><p>Include results at or after the specified min-round.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">currencyGreaterThan</span></td>
+        <td><p>Results should have an amount greater than this value. MicroAlgos are the default currency unless an asset-id is provided, in which case the asset will be used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a></td>
+        <td><span class="parametername">address</span></td>
+        <td><p>Only include transactions with this address in one of the transaction fields.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">assetId</span></td>
+        <td><p>Asset ID</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">currencyLessThan</span></td>
+        <td><p>Results should have an amount less than this value. MicroAlgos are the default currency unless an asset-id is provided, in which case the asset will be used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.SignatureType.html">SignatureType</a></td>
+        <td><span class="parametername">sigType</span></td>
+        <td><p>SigType filters just results using the specified type of signature:</p>
+<ul>
+<li>sig - Standard</li>
+<li>msig - MultiSig</li>
+<li>lsig - LogicSig</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">txid</span></td>
+        <td><p>Lookup the specific transaction by ID.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AddressRole.html">AddressRole</a></td>
+        <td><span class="parametername">addressRole</span></td>
+        <td><p>Combine with the address parameter to define what type of address to search for.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">round</span></td>
+        <td><p>Include results for the specified round.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<span class="xref">TransactionsResponse</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Algorand_Unity_IIndexerClient_SearchForTransactions_System_Byte___Algorand_Unity_Optional_System_Boolean__System_String_Algorand_Unity_Optional_System_UInt64__DateTime_Algorand_Unity_Optional_System_UInt64__System_String_Algorand_Unity_Optional_System_Boolean__Algorand_Unity_Optional_System_UInt64__DateTime_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Address_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_SignatureType_System_String_Algorand_Unity_AddressRole_Algorand_Unity_Optional_System_UInt64___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Search for transactions. Transactions are returned oldest to newest unless the address parameter is used, in which case results are returned newest to oldest.</p>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+              </div>
+          
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <h5>In This Article</h5>
+              <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <div class="pull-left">
+              Generated by DocFX
+              
+            </div>
+            <div class="toggle-mode pull-right visible-sm visible-xs">
+              <div class="icon">
+                <i aria-hidden="true">☀</i>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="switch-style-m">
+                <span class="slider round"></span>
+              </label>
+              <div class="icon">
+                <i aria-hidden="true">☾</i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="../styles/toggle-theme.js"></script>
+      </footer>    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
