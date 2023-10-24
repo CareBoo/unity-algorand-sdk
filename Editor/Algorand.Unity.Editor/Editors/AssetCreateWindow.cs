@@ -5,17 +5,17 @@ using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace Algorand.Unity.Samples.CreatingAsas.Editor
+namespace Algorand.Unity.Editor
 {
     public class AssetCreateWindow : EditorWindow
     {
-        [SerializeField] private AssetObject asset;
+        public AlgorandStandardAsset asset;
 
-        [SerializeField] private AccountObject creatorAccount;
+        public AccountAsset creatorAccount;
 
-        [SerializeField] private AlgodClientObject algod;
+        public AlgodClientAsset algod;
 
-        public static void Show(AssetObject asset)
+        public static void Show(AlgorandStandardAsset asset)
         {
             var window = GetWindow<AssetCreateWindow>("Create ASA");
             window.asset = asset;
@@ -50,12 +50,12 @@ namespace Algorand.Unity.Samples.CreatingAsas.Editor
                 throw new ArgumentNullException(nameof(algod));
 
             // check algod health
-            var healthResponse = await algod.Client.HealthCheck();
+            var healthResponse = await algod.client.HealthCheck();
             if (healthResponse.Error)
                 throw new Exception($"Algod health check failed: {healthResponse.Error}");
 
             // get txn params
-            var (txnParamsErr, txnParams) = await algod.Client.TransactionParams();
+            var (txnParamsErr, txnParams) = await algod.client.TransactionParams();
             if (txnParamsErr)
                 throw new Exception(txnParamsErr);
 
@@ -63,26 +63,27 @@ namespace Algorand.Unity.Samples.CreatingAsas.Editor
             var txn = Transaction.AssetCreate(
                 sender: creatorAccount.Address,
                 txnParams: txnParams,
-                assetParams: asset.Params
+                assetParams: asset.assetParams
             );
-            var signedTxn = creatorAccount.SignTxn(txn);
+            var txns = new AssetConfigTxn[] { txn };
+            var signedTxns = await creatorAccount.SignTxnsAsync(txns, TxnIndices.All);
 
             // send the transaction
-            var (submitTxnErr, txnId) = await algod.Client.SendTransaction(signedTxn);
+            var (submitTxnErr, txnId) = await algod.client.SendTransaction(signedTxns[0]);
             if (submitTxnErr)
                 throw new Exception(submitTxnErr);
             Debug.Log($"Submitted txn with id: {txnId.TxId}");
 
             // wait for confirmation
-            var (txnConfirmErr, confirmedTxn) = await algod.Client.WaitForConfirmation(txnId.TxId);
+            var (txnConfirmErr, confirmedTxn) = await algod.client.WaitForConfirmation(txnId.TxId);
             if (txnConfirmErr)
                 throw new Exception(txnConfirmErr);
 
             // Apply index and network to the ASA
             var serializedObject = new SerializedObject(asset);
             serializedObject.Update();
-            asset.Index = confirmedTxn.AssetIndex.Value;
-            asset.Network = algod.Network;
+            asset.index = confirmedTxn.AssetIndex.Value;
+            asset.network = algod.network;
             serializedObject.ApplyModifiedPropertiesWithoutUndo();
             Debug.Log("Asset Created!");
 
