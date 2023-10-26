@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Algorand.Unity.Samples.CreatingAsas
 {
-    [CreateAssetMenu]
+    [CreateAssetMenu(menuName = "Algorand/Samples/Unsafe Account Asset")]
     public class UnsafeAccountAsset
         : AccountAsset
         , ISigner

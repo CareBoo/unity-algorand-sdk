@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Algorand.Unity.Samples.CreatingAsas.Editor
 {
     [CustomEditor(typeof(UnsafeAccountAsset))]
-    public class AccountObjectEditor : UnityEditor.Editor
+    public class UnsafeAccountAssetEditor : UnityEditor.Editor
     {
         public override void OnInspectorGUI()
         {
