@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Struct ListEnumerator&lt;T, TList&gt;
+    <title>Class FixedStringAppendExtensions
    | Algorand SDK for Unity </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Struct ListEnumerator&lt;T, TList&gt;
+    <meta name="title" content="Class FixedStringAppendExtensions
    | Algorand SDK for Unity ">
     <meta name="generator" content="docfx 2.56.7.0">
     
@@ -77,19 +77,74 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Algorand.Unity.LowLevel.ListEnumerator`2">
+            <article class="content wrap" id="_content" data-uid="Algorand.Unity.Collections.FixedStringAppendExtensions">
   
   
-  <h1 id="Algorand_Unity_LowLevel_ListEnumerator_2" data-uid="Algorand.Unity.LowLevel.ListEnumerator`2" class="text-break">Struct ListEnumerator&lt;T, TList&gt;
+  <h1 id="Algorand_Unity_Collections_FixedStringAppendExtensions" data-uid="Algorand.Unity.Collections.FixedStringAppendExtensions" class="text-break">Class FixedStringAppendExtensions
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Algorand.Unity.LowLevel.html">Algorand.Unity.LowLevel</a></h6>
-  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Algorand_Unity_LowLevel_ListEnumerator_2_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct ListEnumerator&lt;T, TList&gt; : IEnumerator&lt;T&gt;, IDisposable, IEnumerator where TList : IReadOnlyList&lt;T&gt;</code></pre>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">FixedStringAppendExtensions</span></div>
   </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Algorand.Unity.Collections.html">Algorand.Unity.Collections</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="Algorand_Unity_Collections_FixedStringAppendExtensions_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class FixedStringAppendExtensions</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Algorand_Unity_Collections_FixedStringAppendExtensions_Append_" data-uid="Algorand.Unity.Collections.FixedStringAppendExtensions.Append*"></a>
+  <h4 id="Algorand_Unity_Collections_FixedStringAppendExtensions_Append__1___0__ReadOnlySpan_System_Char__" data-uid="Algorand.Unity.Collections.FixedStringAppendExtensions.Append``1(``0@,ReadOnlySpan{System.Char})">Append&lt;T&gt;(ref T, ReadOnlySpan&lt;Char&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FormatError Append&lt;T&gt;(this ref T fs, ReadOnlySpan&lt;char&gt; s)
+    where T : struct, INativeList&lt;byte&gt;, IUTF8Bytes</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">fs</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">ReadOnlySpan</span>&lt;<span class="xref">System.Char</span>&gt;</td>
+        <td><span class="parametername">s</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">FormatError</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -103,115 +158,8 @@
         <td><span class="parametername">T</span></td>
         <td></td>
       </tr>
-      <tr>
-        <td><span class="parametername">TList</span></td>
-        <td></td>
-      </tr>
     </tbody>
   </table>
-  <h3 id="constructors">Constructors
-  </h3>
-  
-  
-  <a id="Algorand_Unity_LowLevel_ListEnumerator_2__ctor_" data-uid="Algorand.Unity.LowLevel.ListEnumerator`2.#ctor*"></a>
-  <h4 id="Algorand_Unity_LowLevel_ListEnumerator_2__ctor__1_" data-uid="Algorand.Unity.LowLevel.ListEnumerator`2.#ctor(`1)">ListEnumerator(TList)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ListEnumerator(TList list)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">TList</span></td>
-        <td><span class="parametername">list</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="properties">Properties
-  </h3>
-  
-  
-  <a id="Algorand_Unity_LowLevel_ListEnumerator_2_Current_" data-uid="Algorand.Unity.LowLevel.ListEnumerator`2.Current*"></a>
-  <h4 id="Algorand_Unity_LowLevel_ListEnumerator_2_Current" data-uid="Algorand.Unity.LowLevel.ListEnumerator`2.Current">Current</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public T Current { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
-  </h3>
-  
-  
-  <a id="Algorand_Unity_LowLevel_ListEnumerator_2_Dispose_" data-uid="Algorand.Unity.LowLevel.ListEnumerator`2.Dispose*"></a>
-  <h4 id="Algorand_Unity_LowLevel_ListEnumerator_2_Dispose" data-uid="Algorand.Unity.LowLevel.ListEnumerator`2.Dispose">Dispose()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
-  </div>
-  
-  
-  <a id="Algorand_Unity_LowLevel_ListEnumerator_2_MoveNext_" data-uid="Algorand.Unity.LowLevel.ListEnumerator`2.MoveNext*"></a>
-  <h4 id="Algorand_Unity_LowLevel_ListEnumerator_2_MoveNext" data-uid="Algorand.Unity.LowLevel.ListEnumerator`2.MoveNext">MoveNext()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool MoveNext()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Algorand_Unity_LowLevel_ListEnumerator_2_Reset_" data-uid="Algorand.Unity.LowLevel.ListEnumerator`2.Reset*"></a>
-  <h4 id="Algorand_Unity_LowLevel_ListEnumerator_2_Reset" data-uid="Algorand.Unity.LowLevel.ListEnumerator`2.Reset">Reset()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Reset()</code></pre>
-  </div>
 </article>
           </div>
           
