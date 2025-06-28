@@ -82,7 +82,7 @@ namespace Algorand.Unity.LowLevel
         }
 
         public static ConversionError ToHex<TFixedString>(ReadOnlySpan<byte> bytes, ref TFixedString hex)
-            where TFixedString : struct, IUTF8Bytes, INativeList<byte>
+            where TFixedString : unmanaged, IUTF8Bytes, INativeList<byte>
         {
             if (!hex.TryResize(bytes.Length * 2, NativeArrayOptions.UninitializedMemory))
             {
@@ -102,7 +102,7 @@ namespace Algorand.Unity.LowLevel
         }
 
         public static ConversionError FromHex<TFixedString>(TFixedString hex, Span<byte> bytes, out int length)
-            where TFixedString : struct, IUTF8Bytes, INativeList<byte>
+            where TFixedString : unmanaged, IUTF8Bytes, INativeList<byte>
         {
             length = hex.Length / 2;
             if (bytes.Length < hex.Length / 2)

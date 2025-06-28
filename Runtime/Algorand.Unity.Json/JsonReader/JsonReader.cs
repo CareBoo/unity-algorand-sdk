@@ -63,7 +63,7 @@ namespace Algorand.Unity.Json
         }
 
         public JsonReadError ReadRaw<T>(ref T value)
-            where T : struct, INativeList<byte>, IUTF8Bytes
+            where T : unmanaged, INativeList<byte>, IUTF8Bytes
         {
             value.Clear();
             SkipWhitespace();

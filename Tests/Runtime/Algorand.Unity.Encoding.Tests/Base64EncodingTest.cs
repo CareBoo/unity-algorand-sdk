@@ -4,7 +4,7 @@ using NUnit.Framework;
 public class Base64Test
 {
     [Test]
-    public void BytesRequiredForBase64EncodingShouldReturnCorrectValue()
+    public void CharsRequiredForBase64EncodingShouldReturnCorrectValue()
     {
         var testCases = new[]
         {
@@ -15,7 +15,7 @@ public class Base64Test
 
         foreach (var (bytes, expected) in testCases)
         {
-            var actual = Base64Encoding.BytesRequiredForBase64Encoding(bytes);
+            var actual = Base64Encoding.CharsRequiredForBase64Encoding(bytes);
             Assert.AreEqual(expected, actual);
         }
     }

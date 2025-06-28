@@ -22,7 +22,7 @@ public class RawTransactionTest
             Amount = 40000
         };
         using var bytes = AlgoApiSerializer.SerializeMessagePack(transaction, Allocator.Persistent);
-        Debug.Log(System.Convert.ToBase64String(bytes.ToArray()));
+        Debug.Log(System.Convert.ToBase64String(bytes.AsArray()));
         var deserialized = AlgoApiSerializer.DeserializeMessagePack<Transaction>(bytes.AsArray());
         Assert.IsTrue(transaction.Equals(deserialized));
     }

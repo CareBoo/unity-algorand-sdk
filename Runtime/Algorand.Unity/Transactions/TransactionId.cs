@@ -46,7 +46,7 @@ namespace Algorand.Unity
             where T : unmanaged, INativeList<byte>, IUTF8Bytes
         {
             TransactionId result = default;
-            var b64BytesSize = Base64Encoding.BytesRequiredForBase64Encoding(result.Length);
+            var b64BytesSize = Base64Encoding.CharsRequiredForBase64Encoding(result.Length);
             if (fs.Length == b64BytesSize)
                 result.CopyFromBase64(fs);
             else

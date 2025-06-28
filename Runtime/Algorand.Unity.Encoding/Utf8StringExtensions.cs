@@ -6,7 +6,7 @@ namespace Algorand.Unity.Collections
     public static unsafe class Utf8StringExtensions
     {
         public static FormatError Append<T>(ref this T fs, bool input)
-            where T : struct, INativeList<byte>, IUTF8Bytes
+            where T : unmanaged, INativeList<byte>, IUTF8Bytes
         {
             return input
                     ? fs.Append("true")

@@ -26,7 +26,7 @@ namespace Algorand.Unity.Formatters
                 s = tmp;
 
             }
-            if (s.Length == Base64Encoding.BytesRequiredForBase64Encoding(result.Length))
+            if (s.Length == Base64Encoding.CharsRequiredForBase64Encoding(result.Length))
                 result.CopyFromBase64(s);
             else
                 Base32Encoding.ToBytes(s, ref result);

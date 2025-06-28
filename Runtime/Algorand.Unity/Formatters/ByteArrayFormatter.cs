@@ -80,7 +80,7 @@ namespace Algorand.Unity.Formatters
                     result[i] = bytes[i];
                 return result;
             }
-            var bytesRequiredForBase64 = Base64Encoding.BytesRequiredForBase64Encoding(result.Length);
+            var bytesRequiredForBase64 = Base64Encoding.CharsRequiredForBase64Encoding(result.Length);
             if (bytesRequiredForBase64 <= FixedString64Bytes.UTF8MaxLengthInBytes)
             {
                 var fs = new FixedString64Bytes();

@@ -1,52 +1,63 @@
+using System;
+using System.Runtime.InteropServices;
+using Algorand.Unity.Collections;
 using Algorand.Unity.LowLevel;
 using Unity.Collections;
-using Unity.Mathematics;
 
 namespace Algorand.Unity
 {
     public static class Base64Encoding
     {
-        public static void CopyToBase64<TBytes, T>(this TBytes bytes, ref T s)
+        public static FormatError CopyToBase64<TBytes, T>(this TBytes bytes, ref T s)
             where TBytes : struct, IArray<byte>
-            where T : struct, IUTF8Bytes, INativeList<byte>
+            where T : unmanaged, IUTF8Bytes, INativeList<byte>
         {
-            s.CopyFrom(System.Convert.ToBase64String(bytes.ToArray()));
+            var byteSpan = MemoryMarshal.AsBytes(MemoryMarshal.CreateReadOnlySpan(ref bytes, 1));
+            return byteSpan.CopyToBase64(ref s);
         }
 
-        public static void CopyFromBase64<TByteArray, T>(ref this TByteArray bytes, T s, int maxLength = int.MaxValue)
+        public static FormatError CopyToBase64<T>(this ReadOnlySpan<byte> bytes, ref T s)
+            where T : unmanaged, IUTF8Bytes, INativeList<byte>
+        {
+            var charLength = CharsRequiredForBase64Encoding(bytes.Length);
+            Span<char> chars = charLength <= 512
+                ? stackalloc char[charLength]
+                : new char[charLength];
+            if (!Convert.TryToBase64Chars(bytes, chars, out var charsWritten))
+            {
+                return FormatError.Overflow;
+            }
+            chars = chars[..charsWritten];
+            s.Clear();
+            return s.Append(chars);
+        }
+
+        public static FormatError CopyFromBase64<TByteArray, T>(ref this TByteArray bytes, T s, int maxLength = int.MaxValue)
             where TByteArray : struct, IArray<byte>
-            where T : struct, IUTF8Bytes, INativeList<byte>
+            where T : unmanaged, IUTF8Bytes, INativeList<byte>
         {
-            var managedString = s.ToString();
-            var byteArr = System.Convert.FromBase64String(managedString);
-            var length = math.min(maxLength, byteArr.Length);
-            for (var i = 0; i < length; i++)
-                bytes[i] = byteArr[i];
+            var byteIndex = 0;
+            var charCount = 0;
+            while (s.Read(ref byteIndex) != Unicode.BadRune)
+            {
+                charCount += 1;
+            }
+            Span<char> chars = charCount <= 512
+                ? stackalloc char[charCount]
+                : new char[charCount];
+            byteIndex = 0;
+            for (var i = 0; i < charCount; i++)
+            {
+                chars[i] = (char)s.Read(ref byteIndex).value;
+            }
+
+            var byteSpan = MemoryMarshal.AsBytes(MemoryMarshal.CreateSpan(ref bytes, 1));
+            return Convert.TryFromBase64Chars(chars, byteSpan, out var bytesWritten)
+                ? FormatError.None
+                : FormatError.Overflow;
         }
 
-        public static void Utf8ToBase64<T, U>(ref this T src, ref U tar)
-            where T : struct, IUTF8Bytes, INativeList<byte>
-            where U : struct, IUTF8Bytes, INativeList<byte>
-        {
-            tar.Clear();
-            var bytes = new byte[src.Length];
-            for (var i = 0; i < src.Length; i++)
-                bytes[i] = src[i];
-            tar.CopyFrom(System.Convert.ToBase64String(bytes));
-        }
-
-        public static void Base64ToUtf8<T, U>(ref this T src, ref U tar)
-            where T : struct, IUTF8Bytes, INativeList<byte>
-            where U : struct, IUTF8Bytes, INativeList<byte>
-        {
-            tar.Clear();
-            var bytes = System.Convert.FromBase64String(src.ConvertToString());
-            tar.Length = bytes.Length;
-            for (var i = 0; i < bytes.Length; i++)
-                tar[i] = bytes[i];
-        }
-
-        public static int BytesRequiredForBase64Encoding(int currentBytes)
+        public static int CharsRequiredForBase64Encoding(int currentBytes)
         {
             return (currentBytes + 2) / 3 * 4;
         }
